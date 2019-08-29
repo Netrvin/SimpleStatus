@@ -10,9 +10,12 @@ foreach($list as $name){
 
 foreach($data as $k => $v){
     if ($v['timestamp'] + REFRESH_INTERVAL < time()){
+        unset($data[$k]['timestamp']);
         foreach ($v as $k2 => $v2){
             $data[$k][$k2]['status'] = 'timeout';
         }
+    }else{
+        unset($data[$k]['timestamp']);
     }
 }
 
@@ -51,7 +54,6 @@ $desc['error'] = 'Agent错误';
                 <div class="mdui-row">
                 <?php foreach($data as $v0): ?>
                 <?php foreach($v0 as $v): ?>
-                <?php if(is_array($v)): ?>
                     <div style="padding: 0;" class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
                         <div class="mdui-card">
                             <div class="mdui-card-header">
@@ -61,7 +63,6 @@ $desc['error'] = 'Agent错误';
                             </div>
                         </div>
                     </div>
-                <?php endif; ?>
                 <?php endforeach; ?>
                 <?php endforeach; ?>
                 </div>
