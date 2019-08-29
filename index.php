@@ -11,7 +11,7 @@ foreach($list as $name){
 foreach($data as $k => $v){
     if ($v['timestamp'] + REFRESH_INTERVAL < time()){
         unset($data[$k]['timestamp']);
-        foreach ($v as $k2 => $v2){
+        foreach ($data[$k] as $k2 => $v2){
             $data[$k][$k2]['status'] = 'timeout';
         }
     }else{
