@@ -43,7 +43,7 @@ $desc['error'] = 'Agent错误';
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
 <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
 </head>
-<body class="mdui-theme-primary-blue mdui-theme-accent-light-blue">
+<body class="mdui-theme-primary-blue mdui-theme-accent-light-blue mdui-typo">
 
 <center><h1 style="font-size: 1.9em;letter-spacing: 0.22em;margin-top: 25px;"><?=SITE_NAME?></h1></center>
 
@@ -54,7 +54,7 @@ $desc['error'] = 'Agent错误';
                 <div class="mdui-row">
                 <?php foreach($data as $v0): ?>
                 <?php foreach($v0 as $v): ?>
-                    <div style="padding: 0;" class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
+                    <div style="padding-top: 8px; padding-bottom: 8px;" class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-4">
                         <div class="mdui-card">
                             <div class="mdui-card-header">
                             <div style="background-color: <?=$color[$v['status']]?>;" class="mdui-card-header-avatar"></div>
@@ -69,6 +69,7 @@ $desc['error'] = 'Agent错误';
             </div>
         </div>
     </div>
+    <div class="mdui-typo" style="margin-top: 20px"><center><span>Powered by <a target="_blank" href="https://github.com/Netrvin/SimpleStatus">SimpleStatus</a>.</span></center></div>
 </div>
 
 </body>
