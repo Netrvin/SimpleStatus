@@ -1,6 +1,10 @@
 # SimpleStatus
 A tool for checking if services running
 
+示例：https://simplestatus.xianyu.it  
+
+Agent：https://github.com/Netrvin/SimpleStatus-Agent
+
 ## Todo
 - [ ] CentOS下在计划任务中运行Agent无法正常检测服务
 - [ ] 前端界面优化
