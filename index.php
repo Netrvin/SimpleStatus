@@ -5,7 +5,9 @@ include_once 'config.php';
 $list = scandir('data');
 $data = array();
 foreach($list as $name){
-    $data[$name] = json_decode(file_get_contents('data/'.$name), true);
+    if (($name!='.')&&($name!='..')){
+        $data[$name] = json_decode(file_get_contents('data/'.$name), true);
+    }
 }
 
 foreach($data as $k => $v){
